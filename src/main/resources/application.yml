@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: DigitalWalletLedgerService
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_db
+    username: payment_user
+    password: payment_password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: payment_password
+
+
+server:
+  port: 8080
